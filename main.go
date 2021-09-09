@@ -11,10 +11,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
+//Define the port for the
 const (
 	WEBPORT = ":8080"
 )
 
+//RespBody is Create the struct to handle the response json
 type RespBody struct {
 	Time struct {
 		Updated    string    `json:"updated"`
@@ -80,6 +82,6 @@ func SolaceConsumer(w http.ResponseWriter, r *http.Request) {
 
 	json.Unmarshal(reqbody, &u)
 
-	fmt.Println(u)
+	fmt.Printf("this is %s", u)
 
 }

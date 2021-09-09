@@ -1,4 +1,4 @@
-module svcrm
+module solconsumer
 
 go 1.16
 
