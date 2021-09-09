@@ -29,4 +29,4 @@ COPY --from=builder /app/main .
 
 EXPOSE 4000
 
-CMD [ "./main" ]
+CMD [ "./solconsumer" ]
