@@ -6,7 +6,7 @@ Requires=docker.service
 Type=oneshot
 RemainAfterExit=yes
 WorkingDirectory= /svcrm
-ExecStart=/usr/local/bin/docker-compose -f /svcrm/docker-compose.yml up -d
-ExecStop=/usr/local/bin/docker-compose -f /svcrm/docker-compose.yml down
+ExecStart=/usr/local/bin/docker-compose -f /solconsumer/docker-compose.yml up -d
+ExecStop=/usr/local/bin/docker-compose -f /solconsumer/docker-compose.yml down
 [Install]
 WantedBy=multi-user.target

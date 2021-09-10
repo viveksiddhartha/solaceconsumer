@@ -10,10 +10,10 @@ data:
   namespace: default
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2019-09-03T13:50:07Z"
+  creationTimestamp: "2020-09-10T13:50:07Z"
   labels:
     app.kubernetes.io/component: deployer.marketplace.cloud.google.com
-    app.kubernetes.io/name: svcrm
+    app.kubernetes.io/name: solconsumer
   name: solconsumer-deployer-config
   namespace: default
   ownerReferences:
@@ -23,5 +23,5 @@ metadata:
     name: solconsumer
     uid: bd04324b-ce51-11e9-a9e9-42010a800209
   resourceVersion: "941418"
-  selfLink: /api/v1/namespaces/default/configmaps/svcrm-deployer-config
+  selfLink: /api/v1/namespaces/default/configmaps/solconsumer-deployer-config
   uid: bd65b580-ce51-11e9-a9e9-42010a800209
