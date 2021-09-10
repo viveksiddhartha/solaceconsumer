@@ -1,7 +1,21 @@
-version: '3.7'
+version: '2'
 services:
-  app:
-    container_name: solaceconsumer
-    build: 
-      context: .
-      dockerfile: Dockerfile
+  database:
+    image: mysql 
+    ports:
+       - "3306:3306"
+    volumes:
+       - ./config/svcrm.sql:/docker-entrypoint-initdb.d/svcrm.sql
+    environment:
+        MYSQL_ROOT_PASSWORD: toortoor
+        MYSQL_USER: root
+        MYSQL_PASSWORD: toortoor
+        MYSQL_DATABASE: sv_crm
+  webapp:
+    depends_on:
+        - database 
+    build: .
+    ports:
+        - "8080:8080"
+    links:
+        - database:mysql
